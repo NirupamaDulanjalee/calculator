@@ -1,0 +1,57 @@
+.calculator {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: dodgerblue;
+  border-radius: 15px; /* Adding curved edges to the calculator frame */
+  overflow: hidden; /* Hides the overflow content within the rounded corners */
+}
+
+.display {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  text-align: right;
+  border-radius: 10px; /* Adding curved edges to the calculator frame */
+  overflow: hidden;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #7fd8ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  grid-column: span 1;
+  border-radius: 10px; /* Adding curved edges to the buttons */
+}
+
+button:nth-child(4) {
+  grid-row: span 2;
+  height: calc(2 * (10px + 18px) + 40px); /* Twice the height of other buttons */
+}
+
+button:nth-last-child(1) {
+  grid-column: span 3; /* Takes up the space of 3 buttons */
+}
+
+button:hover {
+  background-color: #5fa8d3;
+}
